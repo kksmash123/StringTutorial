@@ -4,12 +4,40 @@
 using namespace std;
 
 
+void printASCIIvalues0To127()
+{
+    char A;
+
+    for (int i = 0;i < 128;i++)
+    {
+        A = i;
+        cout << " ASCII Value -> " << i << " equivalent-> " << A<<endl;
+    }
+
+}
+
+void changeCaselowToUp()
+{
+    string A;
+    cout << "Enter the word to convert to uppercase : ";
+    getline(cin, A);
+
+    for (int i = 0;A[i] != NULL;i++)
+    {
+        if (A[i] >= 97 && A[i] <= 122)
+            A[i] -= 32;
+
+    }
+    cout << A;
+
+}
+
 
 void changeCaseOnlyUpToLow()
 {
-    char A[30];
+    string A;
     cout << "Enter the word to convert to lowercase : ";
-    cin.getline(A, sizeof(A));
+    getline(cin, A);
 
     for (int i = 0;A[i] != NULL;i++)
     {
@@ -66,6 +94,10 @@ int main()
    // stringReading();
 
    // changeCaseOnlyUpToLow();
+    
+   // changeCaselowToUp();
+
+   // printASCIIvalues0To127();
 
 }
 
