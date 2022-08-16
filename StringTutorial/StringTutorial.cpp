@@ -4,6 +4,24 @@
 using namespace std;
 
 
+void ToggleCase()
+{
+    string A;
+    cout << "Enter the word to toggle the cases  : ";
+    getline(cin, A);
+
+    for (int i = 0;A[i] != NULL;i++)
+    {
+        if (A[i] >= 97 && A[i] <= 122)
+            A[i] -= 32;
+        else if (A[i] >= 65 && A[i] <= 90)
+            A[i] += 32;
+    }
+    cout << A;
+
+
+}
+
 void printASCIIvalues0To127()
 {
     char A;
@@ -98,6 +116,8 @@ int main()
    // changeCaselowToUp();
 
    // printASCIIvalues0To127();
+
+    ToggleCase();
 
 }
 
