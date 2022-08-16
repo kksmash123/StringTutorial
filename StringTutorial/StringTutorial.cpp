@@ -3,6 +3,26 @@
 
 using namespace std;
 
+
+
+void changeCaseOnlyUpToLow()
+{
+    char A[30];
+    cout << "Enter the word to convert to lowercase : ";
+    cin.getline(A, sizeof(A));
+
+    for (int i = 0;A[i] != NULL;i++)
+    {
+        if(A[i]>=65 && A[i]<=90)
+            A[i] += 32;
+
+    }  
+    cout << A;
+
+
+}
+
+
 void stringReading()
 {
     string strl;
@@ -45,6 +65,7 @@ int main()
 
    // stringReading();
 
+   // changeCaseOnlyUpToLow();
 
 }
 
